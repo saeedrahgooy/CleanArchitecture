@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GlobalTicket.TicketManagement.Application.Features.Events
 {
-    public class GetEventListQuery :IRequest<List<EventListVm>>
+    public class GetEventsListQuery :IRequest<List<EventListVm>>
     {
     }
 }
