@@ -25,6 +25,7 @@ namespace GlobalTicket.TicketManagement.Application.Features.Categories.Queries.
         public async Task<List<CategoryEventListVm>> Handle(GetCategoriesListWithEventQuery request, CancellationToken cancellationToken)
         {
             var list = await _catgoryRepository.GetCategoriesWithEvents(request.IncludeHistory);
+            return _mapper.Map<List<CategoryEventListVm>>(list);
         }
     }
 }
